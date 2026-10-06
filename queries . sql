@@ -1,0 +1,46 @@
+-- Retail Sales Analysis Project Queries
+
+-- 1. Create Database and Table Structure
+CREATE TABLE sales_orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    customer_name VARCHAR(100),
+    product_category VARCHAR(50),
+    product_name VARCHAR(100),
+    sale_amount DECIMAL(10, 2),
+    order_date DATE,
+    region VARCHAR(50)
+);
+
+-- 2. Total Business Revenue and Order Count
+SELECT 
+    COUNT(order_id) AS total_orders, 
+    SUM(sale_amount) AS total_revenue,
+    AVG(sale_amount) AS average_order_value
+FROM sales_orders;
+
+-- 3. Category-wise Sales Performance
+SELECT 
+    product_category, 
+    SUM(sale_amount) AS total_sales,
+    COUNT(order_id) AS items_sold
+FROM sales_orders
+GROUP BY product_category
+ORDER BY total_sales DESC;
+
+-- 4. Top 5 Products by Revenue
+SELECT 
+    product_name, 
+    SUM(sale_amount) AS total_revenue
+FROM sales_orders
+GROUP BY product_name
+ORDER BY total_revenue DESC
+LIMIT 5;
+
+-- 5. Regional Sales Distribution
+SELECT 
+    region, 
+    SUM(sale_amount) AS regional_revenue
+FROM sales_orders
+GROUP BY region
+ORDER BY regional_revenue DESC;
