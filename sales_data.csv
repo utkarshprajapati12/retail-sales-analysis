@@ -1,0 +1,11 @@
+order_id,customer_id,customer_name,product_category,product_name,sale_amount,order_date,region
+101,1,Aman Sharma,Electronics,Wireless Mouse,750,2025-01-15,North
+102,2,Pooja Verma,Electronics,Mechanical Keyboard,2500,2025-01-18,West
+103,3,Rahul Singh,Furniture,Office Chair,6500,2025-02-05,North
+104,1,Aman Sharma,Electronics,Laptop Stand,1200,2025-02-12,North
+105,4,Neha Gupta,Office Supplies,Notebook Pack,450,2025-02-20,South
+106,5,Vikram Patel,Electronics,USB-C Hub,1800,2025-03-02,West
+107,2,Pooja Verma,Furniture,Study Desk,8500,2025-03-10,West
+108,6,Ritu Yadav,Office Supplies,Desk Organizer,600,2025-03-15,East
+109,3,Rahul Singh,Electronics,Wireless Mouse,750,2025-03-22,North
+110,7,Ankit Kumar,Electronics,Monitor 24 Inch,9500,2025-04-05,South
